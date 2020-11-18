@@ -1,23 +1,7 @@
-TRUNCATE noteful_folders, noteful_notes RESTART IDENTITY CASCADE;
-
-INSERT INTO
-    noteful_folders (id, foldername)
-VALUES 
-    (
-        1,
-        'Super'
-    ),
-    (
-        2,
-        'Spangley'
-    ),
-    (
-        3,
-        'Important'
-    );
+TRUNCATE notes RESTART IDENTITY CASCADE;
 
 INSERT INTO 
-    noteful_notes (id, notename, modified, folderid, content)
+    notes (id, notename, modified, folderid, content)
 VALUES
     (
         1,
