@@ -1,6 +1,6 @@
-# Express Boilerplate!
+# Wonderful Music Contraption API
 
-This is a boilerplate project used for starting new projects!
+This is a the backend for the WMC react client
 
 ## Set up
 
