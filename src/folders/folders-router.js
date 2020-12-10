@@ -2,7 +2,7 @@
 const express = require('express');
 const xss = require('xss');
 const logger = require('../logger');
-const foldersService = require('./folder-service');
+const foldersService = require('./folders-service');
 
 const foldersRouter = express.Router();
 const bodyParser = express.json();
