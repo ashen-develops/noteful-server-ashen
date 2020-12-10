@@ -24,7 +24,7 @@ notesRouter
       .catch(next);
   })
   .post(bodyParser, (req, res, next) => {
-    for (const field of ['title', 'content', 'folder_id']) {
+    for (const field of ['notename', 'content', 'folderid']) {
       if (!req.body[field]) {
         logger.error(`${field} is missing for notes post`);
         return res
@@ -33,9 +33,9 @@ notesRouter
       }
     }
     const newNote = {
-      title: xss(req.body.title),
+      notename: xss(req.body.title),
       content: xss(req.body.content),
-      folder_id: req.body.folder_id,
+      folderid: req.body.folder_id,
     };
     notesService
       .addNote(req.app.get('db'), newNote)
