@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const express = require('express');
 const xss = require('xss');
 const logger = require('../logger');

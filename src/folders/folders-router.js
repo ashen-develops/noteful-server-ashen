@@ -7,9 +7,9 @@ const foldersService = require('./folders-service');
 const foldersRouter = express.Router();
 const bodyParser = express.json();
 
-const serializeFolder = (folder) => ({
-  id: folder.id,
-  name: xss(folder.foldername),
+const serializeFolder = (folders) => ({
+  id: folders.id,
+  name: xss(folders.foldername),
 });
 
 foldersRouter
@@ -31,7 +31,7 @@ foldersRouter
       }
     }
     const newfolder = {
-      name: xss(req.body.name),
+      name: xss(req.body.foldername),
     };
     foldersService
       .addFolder(req.app.get('db'), newfolder)
